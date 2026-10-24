@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Gemini</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="app">
+        <header class="navbar">
+            <a href="#" class="brand">
+                <span class="brand-icon">✦</span>
+                Ask <span class="brand-highlight">Gemini</span>
+            </a>
+            <div class="nav-tagline">Better Questions ✦ Smarter Answers</div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <h1>Ask <span>Gemini</span></h1>
+                <p>Ask anything and get helpful answers from Gemini AI.</p>
+            </section>
+
+            <section class="question-card">
+                <div class="card-heading">
+                    <div class="heading-icon">?</div>
+                    <div>
+                        <h2>Your Question</h2>
+                        <p>Type your question below.</p>
+                    </div>
+                </div>
+
+                <textarea id="question" maxlength="500" placeholder="Enter your question..."></textarea>
+
+                <div class="input-footer">
+                    <p class="learning-tip">Keep learning.</p>
+                    <button id="submit-btn" type="button">Ask Gemini</button>
+                </div>
+            </section>
+
+            <section class="response-card">
+                <div class="response-title">
+                    <div class="gemini-icon">✧</div>
+                    <div>
+                        <h2>Gemini's Response</h2>
+                        <p>Your answer will appear here.</p>
+                    </div>
+                </div>
+
+                <div id="answer-box" class="answer-box" aria-live="polite">
+                    <p id="loading-message" hidden>
+                        <span class="loading-spinner"></span>
+                        Generating your answer...
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-divider"></div>
+            <p>Made for curious minds</p>
+            <small>ASK GEMINI</small>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
